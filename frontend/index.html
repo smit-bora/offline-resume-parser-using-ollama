@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Parser (Minimal)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 { color: #333; }
+    #uploadForm {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input[type="file"] { margin: 10px 0; }
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background: #4338ca; }
+    pre {
+      background: #1e1e1e;
+      color: #d1d5db;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      width: 80%;
+      max-width: 900px;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resume Parser</h1>
+  <div id="uploadForm">
+    <input type="file" id="fileInput" accept=".pdf" />
+    <button id="parseBtn">Parse Resume</button>
+    <div id="error"></div>
+  </div>
+
+  <pre id="output">(Parsed JSON will appear here)</pre>
+
+  <script>
+    const API_URL = "http://127.0.0.1:8000/api/v1/parse";
+
+    const fileInput = document.getElementById("fileInput");
+    const parseBtn = document.getElementById("parseBtn");
+    const output = document.getElementById("output");
+    const errorDiv = document.getElementById("error");
+
+    parseBtn.addEventListener("click", async () => {
+      const file = fileInput.files[0];
+      if (!file) {
+        errorDiv.textContent = "Please select a PDF file first.";
+        return;
+      }
+
+      errorDiv.textContent = "";
+      output.textContent = "Parsing... please wait.";
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const res = await fetch(API_URL, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.detail || "Internal Server Error");
+        }
+
+        const data = await res.json();
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.textContent = "";
+        errorDiv.textContent = err.message;
+      }
+    });
+  </script>
+</body>
+</html>

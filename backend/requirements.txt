@@ -1,0 +1,23 @@
+# FastAPI and Server
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+pymupdf==1.22.5
+
+
+# Ollama
+requests==2.31.0
+
+# Data Validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# CORS
+python-multipart==0.0.6
