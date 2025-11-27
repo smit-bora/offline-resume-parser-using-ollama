@@ -1,0 +1,92 @@
+{
+  "personal_info": {
+    "name": "Anweshkumar Reddy Kassa",
+    "email": "kakreddy99@gmail.com",
+    "phone": "+91 9014250399"
+  },
+  "summary": "4 years of experience in QA testing for Android devices and web applications, with a strong focus on Android certification, compliance, security, camera, multimedia and system-level validation.",
+  "experience": [
+    {
+      "company": "Oppo & OnePlus Pvt. Ltd.",
+      "position": "Senior Engineer",
+      "start_date": "September 2024",
+      "end_date": "Present",
+      "responsibilities": [
+        "Lead a high-impact project covering GMS certification, RSA compliance, Product Development Testing (PDT), OS upgrades, and CVE management for over 40 devices launched across Android versions 12 to 15.",
+        "Oversee GMS certification for 40+ Android devices on Qualcomm and MediaTek platforms, ensuring CDD compliance.",
+        "Supervise 13 engineers, assigning tasks, managing resources, and tracking project progress.",
+        "Ensure timely completion of milestones while optimizing team performance.",
+        "Manage key security features Verified Boot, SELinux, Play Integrity API.",
+        "Handle RSA configuration and validation per market-specific agreements.",
+        "Coordinate Variant Build Approval (VBA) for chipset variants.",
+        "Collaborate with Google's teams (APA, AFEE, GMS) to stay aligned on updates.",
+        "Lead Post-Deployment Testing (PDT) during OS upgrades.",
+        "Streamline update processes, reduce downtime, accelerate rollouts.",
+        "Monitor CVEs, validate fixes, and ensure performance impact is minimal.",
+        "Develop custom validation tools for early issue detection.",
+        "Troubleshoot with logcat, dmesg, ADB, and other system logs.",
+        "Collaborate across regions (India, EEA, Taiwan, Russia) for compliance.",
+        "Manage fingerprint certification for chipset variants.",
+        "Provide stakeholders with dashboards and detailed reports."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Siddhartha Institute of Science and Technology",
+      "degree": "B. Tech",
+      "start_date": "2016-2020",
+      "end_date": "Present",
+      "gpa": "8.16"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Operating Systems: Windows, Linux(Ubuntu)",
+      "Version Control: Git",
+      "Languages: Python",
+      "Google Tools: APA, AOSP, AFAP, CI.android.com, CS.android.com, Partner ticket, BTS, Google-drive, Google Chat",
+      "Qualcomm Tools: QXDM, QPST, PDC, Crash scope, RMS, Axiom, PCAT, J-Tag, Qfil, Orbit, Quts, Apex",
+      "Integration Tools: Electric Commander, Tiberium, Putty",
+      "Testing Tools: ALM, Oplus dev, Gtest, Noah, JIRA, Jenkins (Basics), Docker (Basics), API Testing (Basics), Manual testing, Logcat, Bug report"
+    ],
+    "soft_skills": [
+      "Exceptional ability to learn fast and master new concepts",
+      "Effective communicator skilled in using Google Workspace tools for documentation, collaboration, and reporting"
+    ],
+    "tools": [
+      "Selenium",
+      "Appium",
+      "Pytest"
+    ]
+  },
+  "certifications": [
+    {}
+  ],
+  "projects": [
+    {
+      "name": "Google Mobile Services (GMS) Certification, RSA Compliance, PDT, OS Upgrade & CVE Management",
+      "description": "In my current role, I lead a high-impact project covering GMS certification, RSA compliance, Product Development Testing (PDT), OS upgrades, and CVE management for over 40 devices launched across Android versions 12 to 15.",
+      "technologies": [
+        "Android",
+        "Qualcomm",
+        "MediaTek"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "name": "Bug STAR @OnePlus & Oppo Award for seamless deliveries"
+    },
+    {
+      "name": "STAR @ Innominds Award for seamless deliveries"
+    },
+    {
+      "name": "Stopwards for Trust Zone framework"
+    },
+    {
+      "name": "Inno-Team Award of the Quarter Jul-Sep 2022"
+    }
+  ],
+  "_id": "candidate_11"
+}

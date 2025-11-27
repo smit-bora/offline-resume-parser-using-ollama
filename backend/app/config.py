@@ -28,11 +28,9 @@ class Settings(BaseSettings):
     
     # Ollama Settings
     OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_MODEL: str = "llama3.2:latest"
-    OLLAMA_TIMEOUT: int = 120  # seconds
-    OLLAMA_TEMPERATURE: float = 0.05  # Lower = more deterministic
-    PDF_EXTRACTION_METHOD: str = "pymupdf"
-    USE_OCR_FALLBACK: bool = True 
+    OLLAMA_MODEL: str = "llama3.1:8b"
+    OLLAMA_TIMEOUT: int = 300  # seconds (5 minutes)
+    OLLAMA_TEMPERATURE: float = 0.1  # Lower = more deterministic
     
     # Alternative models you can use:
     # - llama3.1:8b (recommended for speed/accuracy balance)
@@ -51,9 +49,14 @@ class Settings(BaseSettings):
     OCR_LANGUAGE: str = "eng"  # Tesseract language code
     
     # Parsing Settings
-    MAX_TOKENS: int = 8000  # Maximum tokens for LLM context
+    MAX_TOKENS: int = 4000  # Maximum tokens for LLM context
     RETRY_ATTEMPTS: int = 3  # Number of retry attempts for failed parsing
     RETRY_DELAY: int = 2  # Seconds to wait between retries
+    
+    # Analysis Settings
+    RUN_ANALYSIS: bool = True  # Enable/disable resume analysis
+    ANALYSIS_MODEL: str = "qwen2.5:7b"  # Model for analysis (can be same or different)
+    ANALYSIS_TEMPERATURE: float = 0.1  # Temperature for analysis (lower = more consistent)
     
     # Resume Sections to Extract (can be customized)
     EXTRACT_SECTIONS: List[str] = [
